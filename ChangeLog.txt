@@ -1,0 +1,38 @@
+March 30, 2009 - Andreas Sumerauer - http://www.soundbytes.de
+==================================================================
+
+Sfz Parser was thoroughly redesigned and has the following new features:
+
+* Sample path can be relative or absolute to any location on the storage media.
+* Path names may contain blank spaces.
+* <group> header can now be used.
+* <key> opcode is now recognized.
+* Comments can be put on the same line with opcodes.
+
+As a side effect it should  be very easy now to include further sfz opcodes and headers.
+
+Fixes and additions:
+
+* The following additional zone parameters can now be modified from the zone editor panel: root key, low key, high key, low velocity, high velocity.
+* A couple of wave files that were refused by the previous version will now load fine.
+* Loopinfo will not be used if loopstart > loopend (workaround for some nonstandard wav editors)
+* When creating loop crossfades Highlife now implements a equal power crossfade instead of the previously used equal gain (linear) crossfade.
+* Highlife won't crash anymore whenever a sample can't be opened. Instead an error message is displayed and the load process is reverted.
+* Added Open Source Logo.
+* About box. (Click on the Highlife Logo to open)
+
+
+March 16, 2008 - George Yohng - http://www.yohng.com
+==================================================================
+
+* Menu items added to save/load instrument in a special highlife format
+* Polyphony stealing is changed, so that the oldest voice is stolen
+  (this seems to work better than what there was before)
+* LFO fixed
+* Updates to make it compile well on MSVS 8.0
+* changes to conform VST SDK better
+     
+
+November 10, 2007 - Chris Walton
+==================================================================
+* Ported to VST SDK 2.4
